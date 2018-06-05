@@ -1,0 +1,32 @@
+<!-- <app-hotel-card [hotel]="hotel" *ngFor="let hotel of hotels"></app-hotel-card> -->
+
+<div class="card hotelCard" style="width: 100%;" *ngFor="let hotel of hotels">
+  <div class="row hotelRow">
+    <div class="col-md-4">
+      <img class="card-img-top hotelImage" src="assets/images/hotels/{{hotel.image}}">
+    </div>
+    <div class="col-md-6 px-3">
+      <div class="card-block px-3">
+        <h5 class="card-title">{{hotel.name}}</h5>
+        <div class="ec-stars-wrapper">
+        	<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+        	<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+        	<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+        	<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+        	<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+        </div>
+        {{hotel.stars}}
+        <div>
+          <div class="amenities" style="width: 100%;" *ngFor="let amenities of hotel.amenities">
+            <img class="" src="assets/icons/amenities/{{amenities}}.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      precio por noche por habitación
+      {{hotel.price}}
+      <a href="#" class="btn btn-primary">Ver hotel</a>
+    </div>
+  </div>
+</div>

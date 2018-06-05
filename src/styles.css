@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+.logo{
+  width: 100%;
+}
+.headerAlmundo{
+  background-color: #00386f!important;
+}
+
+/*card*/
+.card-horizontal {     display: flex; flex-direction: column;}
+.card-horizontal .card-img {    flex: 0 0 $card-img-width;}
+.card-horizontal .card-block {    flex: 0 0 calc(100% - $card-img-width)}
+
+.imageHotel{
+  width: 33.3333333%;
+  max-height: 200px;
+}
+
+.priceHotel{
+  border-left: 1px dashed #ccc;
+}
+
+@media only screen and (min-width: 500px) {
+    hotel .hotel .hotel-ctn .priceHotel {
+        padding:16px
+    }
+
+    hotel .hotel .hotel-ctn .ppriceHotel:before {
+        position: absolute;
+        left: 0;
+        top: 16px;
+        content: "";
+        display: block;
+        width: 1px;
+        border-left: 1px dashed #ccc;
+        height: calc(100% - 32px);
+    }
+}
+
+.amenities{
+  width: 6% !important;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.hotelImage{
+  max-width: 300px;
+  max-height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 64%;
+}
+
+.hotelCard{
+  width: 100%;
+  margin: 10px;
+}
+
+.hotelRow{
+  padding: 10px;
+}
+
+.searchCard{
+  margin-top: 2px;
+  padding: 10px;
+}
+
+.titleCard{
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.ec-stars-wrapper {
+	font-size: 0;
+	display: inline-block;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	font-size: 32px;
+	font-size: 2rem;
+
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+}
+
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+}
