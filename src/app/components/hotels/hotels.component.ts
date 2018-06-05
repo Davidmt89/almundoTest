@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class HotelsComponent implements OnInit {
 
   hotels:Hotels[] = [];
+  inputValue:string = null;
   constructor(private _hotels:HotelsService) { }
 
   ngOnInit() {
@@ -18,9 +19,12 @@ export class HotelsComponent implements OnInit {
     });
   }
 
-  searchHotel(hotelName:string){
-    this._hotels.getHotelsByName(hotelName).subscribe(hotels =>{
-      this.hotels = hotels;
-    });
-  }
+  searchHotel(inputValue:string){
+   console.log(this.hotels);// = [];
+   let searchHotels = [];
+   this._hotels.getHotelsByName(inputValue).subscribe(hotels =>{
+     searchHotels = hotels;
+     this.hotels = searchHotels;
+   });
+ }
 }

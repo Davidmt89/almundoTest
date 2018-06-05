@@ -66,9 +66,23 @@
   padding: 10px;
 }
 
+.searchCard div{
+  width: 100%;
+    margin-left: 0px;
+}
+
+.searchCard div input{
+  width: 65%;
+}
+
+.searchCard div button{
+  width: 35%;
+}
+
 .titleCard{
   margin-top: 10px;
   padding: 10px;
+  height: 45px;
 }
 
 .ec-stars-wrapper {
@@ -84,6 +98,42 @@
   text-decoration: none;
   display: inline-block;
   font-size: 32px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #fbff00;
+  margin: -18px 1px 8px -3px;
 }
+
+.almundoButtom{
+  color: #ffffff !important;
+  background-color: #020692 !important;
+  background-image: none !important;
+  border-color: #ffffff00 !important;
+}
+
+.moneda{
+  line-height: 28px;
+  line-height: 1.75rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.precio{
+  line-height: 28px;
+  line-height: 1.75rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.contenedorPrecio{
+  color: #cb531c;
+  vertical-align: bottom;
+}
+
+.borderPrice{border-left-style: dashed;
+    border-left-width: 0.5px;
+    border-color: #808080b8;
+  }
