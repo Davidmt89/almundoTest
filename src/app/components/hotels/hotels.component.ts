@@ -17,4 +17,10 @@ export class HotelsComponent implements OnInit {
       this.hotels = hotels;
     });
   }
+
+  searchHotel(hotelName:string){
+    this._hotels.getHotelsByName(hotelName).subscribe(hotels =>{
+      this.hotels = hotels;
+    });
+  }
 }

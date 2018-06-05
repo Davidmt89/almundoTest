@@ -12,4 +12,17 @@ router.get('/hotels', (req, res) => {
 	res.send(200, JSON.parse(fs.readFileSync('./src/data/data.json', 'utf8')));
 });
 
+router.get('/hotels/:name', (req, res) => {
+	var fs = require('fs');
+	let filter = req.params['name'];
+	var hotelsArr = [];
+	var consult = JSON.parse(fs.readFileSync('./src/data/data.json', 'utf8'));
+	var result = consult.find(function(element) {
+		if (element.name.indexOf(filter) >= 0) {
+				hotelsArr.push(element);
+		}
+	});
+	res.send(200, hotelsArr);
+});
+
 module.exports = router;

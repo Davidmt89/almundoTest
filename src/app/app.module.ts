@@ -36,6 +36,7 @@ const Routes = [
   ],
   providers: [
     HotelsService,
+    HotelsComponent
   ],
   bootstrap: [AppComponent]
 })

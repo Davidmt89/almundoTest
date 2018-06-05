@@ -11,6 +11,10 @@ export class HotelsService {
   getAllHotels(): Observable<Hotels[]> {
     return this.http.get<Hotels[]>('/routes/hotels/');
   }
+
+  getHotelsByName(hotel: string): Observable<Hotels[]> {
+    return this.http.get<Hotels[]>('/routes/hotels/'+ hotel);
+  }
 }
 
 export interface Hotels {
