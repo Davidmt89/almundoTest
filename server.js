@@ -9,7 +9,7 @@ const routes = require('./server/routes/routes.js');
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/routes', routes);
 
-//Cath all other roytes request and return it to the index
+//Cath all other routes request and return it to the index
 app.get('*', (req, res)=>{
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });

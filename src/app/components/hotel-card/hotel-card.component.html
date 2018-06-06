@@ -1,0 +1,33 @@
+<div class="card hotelCard" style="width: 100%;">
+  <div class="row hotelRow">
+    <div class="col-md-4">
+      <img class="card-img-top hotelImage" src="assets/images/hotels/{{hotel.image}}">
+    </div>
+    <div class="col-md-5 px-3">
+      <div class="card-block px-3">
+        <h5 class="card-title">{{hotel.name}}</h5>
+        <div>
+          <div class="starParent" *ngFor="let number of [1,2,3,4,5]">
+            <div class="starParent" *ngIf="number <= hotel.stars">
+              <div class="star">&#9733;</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="amenities" style="width: 100%;" *ngFor="let amenities of hotel.amenities">
+            <img class="" src="assets/icons/amenities/{{amenities}}.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 borderPrice">
+      <label class="textPrice">precio por noche por habitación</label>
+      <p class="contenedorPrecio">
+        <span class="moneda">ARG</span>
+        &nbsp;
+        <span class="precio">{{hotel.price}}</span>
+      </p>
+      <a href="#" class="btn btn-primary almundoButtom">Ver hotel</a>
+    </div>
+  </div>
+</div>

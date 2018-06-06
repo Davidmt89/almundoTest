@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
 
 import { HotelsService } from './services/hotels.service';
+import { HotelCardComponent } from './components/hotel-card/hotel-card.component';
 
 const Routes = [
   {
@@ -27,7 +28,8 @@ const Routes = [
     AppComponent,
     HotelsComponent,
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    HotelCardComponent
   ],
   imports: [
     BrowserModule,

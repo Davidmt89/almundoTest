@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HotelsComponent } from '../hotels/hotels.component';
 
 @Component({
@@ -9,11 +9,20 @@ export class SearchComponent implements OnInit {
 
   constructor(private hotelsComponent:HotelsComponent) { }
 
+  @Output() public searchHotelsA = new EventEmitter<string>();
+  @Output() public searchHotelsB = new EventEmitter<string>();
+  inputValue:string = null;
+  checkValue:string = null;
+  filterList:string[] = ['5','4','3','2','1'];
   ngOnInit() {
   }
 
-  searchHotel(){
-    this.hotelsComponent.searchHotel('Radisson');
+  public searchHotels(inputValue:string){
+    this.searchHotelsA.emit(inputValue);
+  }
+
+  public searchHotelsByStar(checkValue:string){
+    this.searchHotelsB.emit(checkValue);
   }
 
 }

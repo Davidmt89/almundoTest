@@ -25,4 +25,20 @@ router.get('/hotels/:name', (req, res) => {
 	res.send(200, hotelsArr);
 });
 
+router.get('/hotels/filters/:star', (req, res) => {
+	var fs = require('fs');
+	let filter = parseInt(req.params['star']);
+	var hotelsArr = [];
+	var consult = JSON.parse(fs.readFileSync('./src/data/data.json', 'utf8'));
+	var result = consult.find(function(element) {
+		if (filter == 6) {
+			hotelsArr.push(element);
+		}
+		else if (element.stars == filter) {
+				hotelsArr.push(element);
+		}
+	});
+	res.send(200, hotelsArr);
+});
+
 module.exports = router;

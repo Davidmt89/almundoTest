@@ -1,58 +1,8 @@
-<!-- <app-hotel-card [hotel]="hotel" *ngFor="let hotel of hotels"></app-hotel-card> -->
 <div class="row">
   <div class="col-md-3">
-    <div class="card titleCard">
-      <div class="row">
-        <div class="col-md-12">
-          <label>Filtros</label>
-        </div>
-      </div>
-    </div>
-    <div class="card searchCard">
-      <div class="row">
-        <label>Nombre del hotel</label>
-        <input #textbox class="form-control" type="text" [value]="inputValue" placeholder="Ingrese el nombre del hotel">
-        <button class="btn btn-outline-primary btn-block almundoButtom" (click)="searchHotel(textbox.value)">Aceptar</button>
-      </div>
-    </div>
-    <div class="card searchCard">
-      <div class="row">
-        <label>Estrellas</label>
-      </div>
-    </div>
+    <app-search (inputValue)="inputValue" (checkValue)="checkValue" (searchHotelsB)="searchHotelsByStar($event)" (searchHotelsA)="searchHotels($event)"></app-search>
   </div>
   <div class="col-md-9">
-    <div class="card hotelCard" style="width: 100%;" *ngFor="let hotel of hotels">
-      <div class="row hotelRow">
-        <div class="col-md-4">
-          <img class="card-img-top hotelImage" src="assets/images/hotels/{{hotel.image}}">
-        </div>
-        <div class="col-md-5 px-3">
-          <div class="card-block px-3">
-            <h5 class="card-title">{{hotel.name}}</h5>
-            <div>
-              <div class="starParent" *ngFor="let number of [1,2,3,4,5]">
-                <div class="starParent" *ngIf="number <= hotel.stars">
-                  <div class="star">&#9733;</div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="amenities" style="width: 100%;" *ngFor="let amenities of hotel.amenities">
-                <img class="" src="assets/icons/amenities/{{amenities}}.svg">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 borderPrice">
-          precio por noche por habitación
-          <p class="contenedorPrecio">
-            <span class="moneda">ARG</span>
-            <span class="precio">{{hotel.price}}</span>
-          </p>
-          <a href="#" class="btn btn-primary almundoButtom">Ver hotel</a>
-        </div>
-      </div>
-    </div>
+    <app-hotel-card [hotel]="hotel" style="width: 100%;" *ngFor="let hotel of hotels"></app-hotel-card>
   </div>
 </div>

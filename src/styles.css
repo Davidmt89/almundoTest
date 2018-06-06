@@ -108,6 +108,8 @@
   background-color: #020692 !important;
   background-image: none !important;
   border-color: #ffffff00 !important;
+  width: 70%;
+  margin-left: 15%;
 }
 
 .moneda{
@@ -131,9 +133,33 @@
 .contenedorPrecio{
   color: #cb531c;
   vertical-align: bottom;
+  text-align: center;
 }
 
 .borderPrice{border-left-style: dashed;
     border-left-width: 0.5px;
     border-color: #808080b8;
   }
+
+.starfilter{
+  display: inline-block;
+  width: 10% !important;
+}
+
+.checkFilter{
+  display: inline-block;
+  width: 15% !important;
+}
+
+.textPrice{
+  text-align: center;
+  font-size: 13px;
+  margin: 12px 0px 7px 0px;
+}
+
+.searchButton{
+  color: #ffffff !important;
+  background-color: #020692 !important;
+  background-image: none !important;
+  border-color: #ffffff00 !important;
+}

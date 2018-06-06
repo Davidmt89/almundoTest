@@ -1,4 +1,4 @@
-<!-- <div class="card titleCard">
+<div class="card titleCard">
   <div class="row">
     <div class="col-md-12">
       <label>Filtros</label>
@@ -8,14 +8,24 @@
 <div class="card searchCard">
   <div class="row">
     <label>Nombre del hotel</label>
-    <input type="text" class="form-control" id="hotelName" placeholder="Ingrese el nombre del hotel">
-    <button (click)="searchHotel()" type="button" class="btn btn-outline-primary btn-block">
-      Aceptar
-    </button>
+    <input #textbox class="form-control" type="text" [value]="inputValue" placeholder="Ingrese el nombre del hotel">
+    <button class="btn btn-outline-primary btn-block searchButton" (click)="searchHotels(textbox.value)">Aceptar</button>
   </div>
 </div>
 <div class="card searchCard">
   <div class="row">
     <label>Estrellas</label>
   </div>
-</div> -->
+  <div>
+    <input id="cbFilter" class="checkFilter" type="checkbox" (change)="searchHotelsByStar(6)" checked/>
+    <label>Todas las estrellas</label>
+    <div *ngFor="let filter of filterList">
+      <input id="cbFilter" class="checkFilter" type="checkbox" (change)="searchHotelsByStar(filter)"/>
+      <div class="starfilter" *ngFor="let number of [1,2,3,4,5]">
+        <div *ngIf="number <= filter">
+          <div class="star">&#9733;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

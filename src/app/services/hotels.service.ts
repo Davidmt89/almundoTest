@@ -15,6 +15,10 @@ export class HotelsService {
   getHotelsByName(hotel: string): Observable<Hotels[]> {
     return this.http.get<Hotels[]>('/routes/hotels/'+ hotel);
   }
+
+  getHotelsByStar(star: string): Observable<Hotels[]>{
+    return this.http.get<Hotels[]>('/routes/hotels/filters/'+ star);
+  }
 }
 
 export interface Hotels {
