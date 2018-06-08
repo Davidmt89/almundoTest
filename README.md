@@ -6,7 +6,7 @@ Proyecto de prueba almundo.com
 
 Para ejecutar el sitio web se debe seguir con las siguientes insturcciones.
 
-- Instalar la versión mas reciente de node js 
+- Instalar la versión mas reciente de node js (10.4.0)
 - Ejecutar el comando npm install para que descargue las referencias de los componentes.
 - Instalar el componente nodemon(npm install -g nodemon)
 - Ejecutar el sitio web con la sintaxis npm run build.
